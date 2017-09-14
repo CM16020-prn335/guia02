@@ -27,3 +27,4 @@ services:
 volumes:
      pgdata:
 
+SELECT DISTINCT c.comentario FROM Cometario c JOIN PostPaso pp WHERE c.aprobado = false and c.fecha BETWEEN '2017-09-09' AND '2017-09-14'AND pp.postPasoPK.idPost IN (SELECT pp1.postPasoPK.idPost FROM PostPaso pp1 WHERE pp1.paso.nombre = 'PUBLICADO')
